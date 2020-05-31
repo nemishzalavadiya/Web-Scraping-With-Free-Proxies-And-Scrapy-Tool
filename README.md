@@ -1,4 +1,5 @@
 # Web_Scraping_Using_Proxies_And_Scrapy
+## Click and Use --> run_me.sh file
 Scrapy project with Free Proxies and also by obeying robot.txt file rules of website
 ### https://www.barchart.com/robots.txt
 Sitemap: https://www.barchart.com/sitemap.xml
@@ -22,3 +23,5 @@ Sitemap: https://www.barchart.com/sitemap.xml
 ### One of my favorite in Scrapy is scrapy.Spider class,
  - scrapy has a very userful scrapy.Spider class which provides a essential code for scraping which we can utilize as a super class and
    take advantage by saving lots of time and most important is our time.
+
+### my scraping code is written in GOOGCompetitor.py file
