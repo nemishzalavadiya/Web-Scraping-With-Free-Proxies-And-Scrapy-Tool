@@ -33,7 +33,7 @@ class GoogNameJson(scrapy.Spider):
 
     #creating free proxys
     def createProxy(self):
-        with open('./list.txt','a') as fp:
+        with open('./proxy_list.txt','a') as fp:
             for ip in self.get_proxies():
                 fp.write("http://"+ip+'\n')
 
