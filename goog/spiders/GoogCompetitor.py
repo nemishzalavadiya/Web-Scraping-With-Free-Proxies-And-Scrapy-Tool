@@ -39,11 +39,22 @@ class GoogNameJson(scrapy.Spider):
 
 
     #find out Symbols from finsymbols
-    def __init__(self):
+    def __init__(self,path=" "):
         self.createProxy()
-        self.sp = self.get_symbols()
-        for ever in self.sp:
-            self.start_urls.append(self.pre_url+ever['symbol'].strip()+self.end_url)
+        if path==" ":
+            self.sp = self.get_symbols()
+            for ever in self.sp:
+                self.start_urls.append(self.pre_url + ever["symbol"].strip() + self.end_url)
+        else:
+            try:
+                with open("../"+path,'r') as fp:
+                    syllabol = fp.read()
+                    self.sp = [symbol_.strip() for symbol_ in syllabol.split(',')]
+                    for ever in self.sp:
+                        self.start_urls.append(self.pre_url + ever + self.end_url)
+            except Exception as e:
+                print("file operation failed "+ str(e))
+                return
 
     #create symbol name from url
     def get_symbol_from_url(self,url):
@@ -52,8 +63,11 @@ class GoogNameJson(scrapy.Spider):
     #parser to get data and store it as a json File
     def parse(self,response):
         symbol = self.get_symbol_from_url(response.url)
-        location_of_Name = "/html/body/div[2]/div/div[2]/div[2]/div/div[2]/div/div[1]/div/div[1]/div[1]/h1/span[1]/text()"
-        yield {
-            'Symbol':symbol,
-            "Name":response.xpath(location_of_Name).extract_first(),
-        }
+        try:
+            location_of_Name = "/html/body/div[2]/div/div[2]/div[2]/div/div[2]/div/div[1]/div/div[1]/div[1]/h1/span[1]/text()"
+            yield {
+                'Symbol':symbol,
+                "Name":response.xpath(location_of_Name).extract_first(),
+            }
+        except:
+            print("connection failed with site for provided symbol "+symbol)
