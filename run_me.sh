@@ -31,7 +31,7 @@ echo ""
 echo "                                Welcome TO My Scraping                                        "
 echo ""
 echo ""
-echo "Enter Json File Name to create ( use charater and '_' only )! Output file will be available in goog directory."
+echo "Enter Json File Name to create ( use charater and '_' only )! Output file will be available with JSONFiles directory"
 echo ""
 echo -n "Name : "
 read name
@@ -45,11 +45,12 @@ then
   do
     echo ""
     echo "Make Sure Data In Your File is like, provided in symbol.txt as a sample."
-    echo "Enter Absolute File Path from this files position - include ( ./ ) for current directory"
+    echo "Enter Relative File Path from this files position "
     echo ""
     echo -n "File Path ( With File Extention ) : "
     read file
-    if test  -f $file
+    current="./"
+    if test  -f $current$file
     then
       break
     else
@@ -71,7 +72,7 @@ then
   read choice_1
   if [ $choice_1 == "Y" -o $choice_1 == "y" ]
   then
-    scrapy crawl GOOGCompetitor -s FEED_URI=$head$name$extention -s FEED_FORMAT=json -a path=$file
+    scrapy crawl GOOGCompetitor -s FEED_URI=$head$name$extention -s FEED_FORMAT=json -a path=$current$file
   else
     echo ""
     echo "Thanks for using..."
@@ -101,7 +102,7 @@ echo ""
 echo ""
 echo "............................Thanks for using......................................"
 echo ""
-echo "On Success json file will be found in ( goog ) directory. if error then check symbole file formate or .json extention"
+echo "On Success json file will be found in ( JSONFiles ) directory. if error then check symbole file formate or .json extention"
 echo ""
 echo "Press Any Key to Exit"
 read any
