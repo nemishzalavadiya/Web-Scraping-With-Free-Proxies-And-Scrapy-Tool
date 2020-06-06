@@ -28,5 +28,10 @@ Sitemap: https://www.barchart.com/sitemap.xml
 
 #### I have used free proxies from https://free-proxy-list.net/.
       Here is a screenshot of received proxies,
-      ![proxy list](https://github.com/nemishzalavadiya/Web_Scraping_Using_Proxies_And_Scrapy/blob/master/Screenshot/proxy_list.PNG)
+![proxy list](https://github.com/nemishzalavadiya/Web_Scraping_Using_Proxies_And_Scrapy/blob/master/Screenshot/proxy_list.PNG)
+      
+      
+      
+      
+      
 
