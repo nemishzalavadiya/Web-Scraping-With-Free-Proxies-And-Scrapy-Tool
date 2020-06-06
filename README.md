@@ -13,6 +13,9 @@ Sitemap: https://www.barchart.com/sitemap.xml
  - User-agent: msnbot ->
    Crawl-delay: 3
 
+       Here, In this approch i have used complete transparancy by getting every line of json file with different request with changing ip address. Which by the way i got from free-proxies site. It's very much secure because of scrapy's inbuilt support. which is choice of major web scraper because of simplicity and efficiency.
+
+
 ### Scrapy is a very efficient and handy tool for web scraping purpose. I have used it here in this project where what i did is,
  - Created genspider using scrapy startproject cmd which gives supporting environment for data extraction which is pipeline support for
     requests.
