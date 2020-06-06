@@ -38,7 +38,7 @@ Sitemap: https://www.barchart.com/sitemap.xml
       Here is a screenshot of the sample json file,
 ![goog list of competitor](https://github.com/nemishzalavadiya/Web_Scraping_Using_Proxies_And_Scrapy/blob/master/Screenshot/goog_list_json.PNG)
       
-#### Here I have created Utility Class, Unittesting Class, ConfigurationXml Files etc. to manage organization of code as well as make ismodularized.
+#### Here I have created Utility Class, Unittesting Class, ConfigurationXml Files etc. to manage organization of code as well as make it look modularized.
  
  - Utility Class
    - ProxyUtility
