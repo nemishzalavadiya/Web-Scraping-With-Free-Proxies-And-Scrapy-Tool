@@ -25,3 +25,8 @@ Sitemap: https://www.barchart.com/sitemap.xml
    take advantage by saving lots of time and most important is our time.
 
 ### my scraping code is written in GOOGCompetitor.py file
+
+#### I have used free proxies from https://free-proxy-list.net/.
+      Here is a screenshot of received proxies,
+      ![proxy list]()
+
