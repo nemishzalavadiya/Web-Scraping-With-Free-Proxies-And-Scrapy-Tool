@@ -14,7 +14,7 @@ Sitemap: https://www.barchart.com/sitemap.xml
    Crawl-delay: 3
 
       <p>&nbsp&nbsp&nbsp Here, In this approch i have used complete transparancy by getting every line of json file with different request by changing ip address. Which by the way i got from free-proxies site. It's very much secure because of scrapy's inbuilt support. which is choice of major web scraper because of simplicity and efficiency.</p>
-      <p>&nbsp&nbsp So, It's gonna take time to load all the data from the site </p>
+      <p>&nbsp&nbsp becuase of this approch, It's gonna take time to load all the data from the site </p>
 
 
 ### Scrapy is a very efficient and handy tool for web scraping purpose. I have used it here in this project where what i did is,
