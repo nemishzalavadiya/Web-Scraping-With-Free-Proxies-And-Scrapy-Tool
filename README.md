@@ -41,13 +41,13 @@ Sitemap: https://www.barchart.com/sitemap.xml
 #### Here I have created Utility Class, Unittesting Class, ConfigurationXml Files etc. to manage organization of code as well as make ismodularized.
  
  - Utility Class
-  - ProxyUtility
-  - SymbolUtility
-  - XmlUtility
+   - ProxyUtility
+   - SymbolUtility
+   - XmlUtility
  - Unittesting
-  - test
+   - test
  - goog
-  - spiders
-   - GoogCompetitor ( Functional Requirements performed here )
-  - setting.py and other util classes of scrapy      
+   - spiders
+    - GoogCompetitor ( Functional Requirements performed here )
+   - setting.py and other util classes of scrapy      
 
