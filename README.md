@@ -17,7 +17,7 @@ Sitemap: https://www.barchart.com/sitemap.xml
  - Created genspider using scrapy startproject cmd which gives supporting environment for data extraction which is pipeline support for
     requests.
  - efficient middlewares to handle proxes, use other api services while scraping et cetera.
- - scrapy also provides support for various operations number of proxies per requests, Download_middle where directely etc. in setting.py
+ - scrapy also provides support for various operations number of proxies per requests, Download_middle directely etc. in setting.py
    file.
    
 ### One of my favorite in Scrapy is scrapy.Spider class,
