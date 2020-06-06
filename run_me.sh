@@ -4,6 +4,8 @@ echo "                                Welcome TO My Scraping                    
 echo ""
 echo "To get required output please read instructions carefully and provide your choices as mentioned or you might get an error."
 echo ""
+head="../JSONFiles/"
+extention=".json"
 while [ 1 ]
 do
   echo "Instru : do you have scrapy installed  ? Y/N"
@@ -29,12 +31,12 @@ echo ""
 echo "                                Welcome TO My Scraping                                        "
 echo ""
 echo ""
-echo "Enter Json File Name to create ( Add .json at last & use charater and '_' only )! Output file will be available in goog directory."
+echo "Enter Json File Name to create ( use charater and '_' only )! Output file will be available in goog directory."
 echo ""
-echo -n "JSON ( append .json ) name : "
+echo -n "Name : "
 read name
 echo ""
-echo "Do you have file for Symboles Y/N?"
+echo "Do you have file with Symboles as samle symbol.txt file Y/N?"
 echo -n "Choice : "
 read choice
 if [ $choice == "Y" -o $choice == "y" ]
@@ -69,7 +71,7 @@ then
   read choice_1
   if [ $choice_1 == "Y" -o $choice_1 == "y" ]
   then
-    scrapy crawl GOOGCompetitor -a path=$file -o $name
+    scrapy crawl GOOGCompetitor -s FEED_URI=$head$name$extention -s FEED_FORMAT=json -a path=$file
   else
     echo ""
     echo "Thanks for using..."
@@ -86,11 +88,12 @@ else
   read choice_2
   if [ $choice_2 == "Y" -o $choice_2 == "y" ]
   then
-    scrapy crawl GOOGCompetitor -a path=' ' -o $name
+    scrapy crawl GOOGCompetitor -s FEED_URI=$head$name$environment -s FEED_FORMAT=json -a path=' '
   else
     echo ""
   fi
 fi
+read b
 clear
 echo ""
 echo "                                Welcome TO My Scraping                                        "

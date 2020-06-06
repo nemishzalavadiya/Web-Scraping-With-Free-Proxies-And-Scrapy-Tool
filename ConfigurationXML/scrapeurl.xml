@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<urls type="scrap">
+    <url site="GoogCompetitor" >
+        <pre>'https://www.barchart.com/stocks/quotes/'</pre>
+        <end>'/overview'</end>
+    </url>
+</urls>
