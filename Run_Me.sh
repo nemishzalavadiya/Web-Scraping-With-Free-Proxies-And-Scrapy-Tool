@@ -82,6 +82,7 @@ else
   echo ""
   echo "                                Welcome TO My Scraping                                        "
   echo ""
+  cd ./goog/
   echo "Process Going To Start......"
   echo "Here i used Seperate Free-Proxy for each symbol so may take 2-3 min or depend on file you have provided."
   echo "Do you want to continue..Y/N"

@@ -28,3 +28,5 @@ class XmlProxyUtil:
             if url.hasAttribute("site"):
                 self.site = url.getAttribute("site")
         return self.site[1:-1]
+print(XmlScrapeUtil().get_scraping_url())
+print(XmlProxyUtil().get_proxy_url())

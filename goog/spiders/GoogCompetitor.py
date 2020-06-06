@@ -15,7 +15,7 @@ class GoogNameJson(scrapy.Spider):
     # find out Symbols from finsymbols
     def __init__(self, path=" "):
 
-        ProxyUtil().create_proxy()  # to create proxy file
+        ProxyUtil().create_proxy()  # to create proxy file already created one's so not need
         self.pre_url, self.end_url = XmlScrapeUtil().get_scraping_url()
         if self.pre_url is None or self.end_url is None:
             sys.exit("No Url Found in scrapeurl.xml file to scrape")
