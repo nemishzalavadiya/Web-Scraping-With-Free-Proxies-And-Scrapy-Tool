@@ -13,7 +13,7 @@ Sitemap: https://www.barchart.com/sitemap.xml
  - User-agent: msnbot ->
    Crawl-delay: 3
 
-       Here, In this approch i have used complete transparancy by getting every line of json file with different request with changing ip address. Which by the way i got from free-proxies site. It's very much secure because of scrapy's inbuilt support. which is choice of major web scraper because of simplicity and efficiency.
+       Here, In this approch i have used complete transparancy by getting every line of json file with different </br>request with changing ip address. Which by the way i got from free-proxies site. It's very much secure because of scrapy's</br> inbuilt support. which is choice of major web scraper because of simplicity and efficiency.</br>
 
 
 ### Scrapy is a very efficient and handy tool for web scraping purpose. I have used it here in this project where what i did is,
