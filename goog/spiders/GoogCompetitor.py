@@ -1,73 +1,50 @@
-#imports
-#here to get parsing i have used lxml
-#so, install is : pip install xml
-import requests
-from lxml.html import fromstring
+# imports
 import scrapy
-from finsymbols import symbols
+import sys
+from Utilities.proxyUtil import ProxyUtil
+from Utilities.symbolUtil import SymbolUtil
+from Utilities.XmlUtil import XmlScrapeUtil
+
 
 class GoogNameJson(scrapy.Spider):
     ''' Class to scrape the GOOG Competitors '''
     name = "GOOGCompetitor"
-    pre_url = 'https://www.barchart.com/stocks/quotes/'
-    end_url = '/overview'
-    start_urls = [   
+    start_urls = [
     ]
 
-    def get_proxies(self):
-        ''' here i have used static side to get free ip's to change on each run in cycle '''
-        url = 'https://free-proxy-list.net/'
-        response = requests.get(url)
-        parser = fromstring(response.text)
-        proxies = set()
-        for i in parser.xpath('//tbody/tr')[:30]:
-            if i.xpath('.//td[7][contains(text(),"yes")]'):
-                #Grabbing IP and corresponding PORT
-                proxy = ":".join([i.xpath('.//td[1]/text()')[0], i.xpath('.//td[2]/text()')[0]])
-                proxies.add(proxy)
-        return proxies
+    # find out Symbols from finsymbols
+    def __init__(self, path=" "):
 
-    #generate Symbol
-    def get_symbols(self):
-        return symbols.get_sp500_symbols()
+        ProxyUtil().create_proxy()  # to create proxy file
+        self.pre_url, self.end_url = XmlScrapeUtil().get_scraping_url()
+        if self.pre_url is None or self.end_url is None:
+            sys.exit("No Url Found in scrapeurl.xml file to scrape")
+        self.prepare_start_urls(path)  # create urls paths
+        return
 
-    #creating free proxys
-    def createProxy(self):
-        with open('./proxy_list.txt','a') as fp:
-            for ip in self.get_proxies():
-                fp.write("http://"+ip+'\n')
-
-
-    #find out Symbols from finsymbols
-    def __init__(self,path=" "):
-        self.createProxy()
-        if path==" ":
-            self.sp = self.get_symbols()
+    def prepare_start_urls(self, path):
+        if path == " ":
+            self.sp = SymbolUtil.get_symbols()
             for ever in self.sp:
                 self.start_urls.append(self.pre_url + ever["symbol"].strip() + self.end_url)
         else:
             try:
-                with open("../"+path,'r') as fp:
-                    syllabol = fp.read()
-                    self.sp = [symbol_.strip() for symbol_ in syllabol.split(',')]
+                with open("../" + path, 'r') as fp:
+                    syllable = fp.read()
+                    self.sp = [symbol_.strip() for symbol_ in syllable.split(',')]
                     for ever in self.sp:
                         self.start_urls.append(self.pre_url + ever + self.end_url)
             except Exception as e:
-                print("file operation failed "+ str(e))
-                return
+                sys.exit("file operation failed " + str(e))
 
-    #create symbol name from url
-    def get_symbol_from_url(self,url):
-        return url.split('/')[5]
-
-    #parser to get data and store it as a json File
-    def parse(self,response):
-        symbol = self.get_symbol_from_url(response.url)
+    # parser to get data and store it as a json File
+    def parse(self, response):
+        symbol = SymbolUtil.get_symbol_from_url(response.url)
         try:
             location_of_Name = "/html/body/div[2]/div/div[2]/div[2]/div/div[2]/div/div[1]/div/div[1]/div[1]/h1/span[1]/text()"
             yield {
-                'Symbol':symbol,
-                "Name":response.xpath(location_of_Name).extract_first(),
+                'Symbol': symbol,
+                "Name": response.xpath(location_of_Name).extract_first(),
             }
-        except:
-            print("connection failed with site for provided symbol "+symbol)
+        except Exception as e:
+            print("connection failed with site for provided symbol " + symbol)
