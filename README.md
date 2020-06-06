@@ -30,7 +30,9 @@ Sitemap: https://www.barchart.com/sitemap.xml
       Here is a screenshot of received proxies,
 ![proxy list](https://github.com/nemishzalavadiya/Web_Scraping_Using_Proxies_And_Scrapy/blob/master/Screenshot/proxy_list.PNG)
       
-      
+#### Output get from this scraping is available in json file as below,
+
+![goog list of competitor](https://github.com/nemishzalavadiya/Web_Scraping_Using_Proxies_And_Scrapy/blob/master/Screenshot/goog_list_json.PNG)
       
       
       
