@@ -1,5 +1,5 @@
 # Web_Scraping_Using_Proxies_And_Scrapy-Tool
-## Click and Use --> run_me.sh file
+## Click and Use --> Run_Me.sh file
 Scrapy project with Free Proxies and also by obeying robot.txt file rules of website
 ### https://www.barchart.com/robots.txt
 Sitemap: https://www.barchart.com/sitemap.xml
