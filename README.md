@@ -28,7 +28,7 @@ Sitemap: https://www.barchart.com/sitemap.xml
  - scrapy has a very userful scrapy.Spider class which provides a essential code for scraping which we can utilize as a super class and
    take advantage by saving lots of time and most important is our time.
 
-### my scraping code is written in Spider/GOOGCompetitor.py file
+> Project
 
 #### I have used free proxies from https://free-proxy-list.net/.
       Here is a screenshot of received proxies,
