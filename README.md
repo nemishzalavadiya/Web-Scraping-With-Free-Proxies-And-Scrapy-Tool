@@ -30,14 +30,6 @@ Sitemap: https://www.barchart.com/sitemap.xml
 
 > Project
 
-#### I have used free proxies from https://free-proxy-list.net/.
-      Here is a screenshot of received proxies,
-![proxy list](https://github.com/nemishzalavadiya/Web_Scraping_Using_Proxies_And_Scrapy/blob/master/Screenshot/proxy_list.PNG)
-      
-#### Output get from this scraping is available in json file inside goog folder with provided name in a script file.
-      Here is a screenshot of the sample json file,
-![goog list of competitor](https://github.com/nemishzalavadiya/Web_Scraping_Using_Proxies_And_Scrapy/blob/master/Screenshot/goog_list_json.PNG)
-      
 #### Here I have created Utility Class, Unittesting Class, ConfigurationXml Files etc. to manage organization of code as well as make it look modularized.
  
  - **Utility Class**
@@ -49,5 +41,15 @@ Sitemap: https://www.barchart.com/sitemap.xml
  - **goog**
    - spiders
      - GoogCompetitor ( Functional Requirements performed here )
-   - setting.py and other util classes of scrapy      
+   - setting.py and other util classes of scrapy 
+
+#### I have used free proxies from https://free-proxy-list.net/.
+      Here is a screenshot of received proxies,
+![proxy list](https://github.com/nemishzalavadiya/Web_Scraping_Using_Proxies_And_Scrapy/blob/master/Screenshot/proxy_list.PNG)
+      
+#### Output get from this scraping is available in json file inside goog folder with provided name in a script file.
+      Here is a screenshot of the sample json file,
+![goog list of competitor](https://github.com/nemishzalavadiya/Web_Scraping_Using_Proxies_And_Scrapy/blob/master/Screenshot/goog_list_json.PNG)
+      
+     
 
