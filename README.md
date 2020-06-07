@@ -1,6 +1,6 @@
 # Web_Scraping_Using_Proxies_And_Scrapy-Tool
 
-[!coverage](https://github.com/nemishzalavadiya/Web-Scraping-With-Free-Proxies-And-Scrapy-Tool/blob/master/Badges/coverage)
+[!coverage](https://github.com/nemishzalavadiya/Web-Scraping-With-Free-Proxies-And-Scrapy-Tool/blob/master/Badges/coverage.svg)
 
 ## Click and Use  `Run_Me.sh` file
 Scrapy project with Free Proxies and also by obeying robot.txt file rules of website
