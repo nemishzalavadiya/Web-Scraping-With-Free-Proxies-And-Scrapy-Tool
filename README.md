@@ -12,8 +12,8 @@ Sitemap: https://www.barchart.com/sitemap.xml
 
 > Approch
 ---
-      Here, In this approch, I have used complete transparancy by getting every line of json file with different request by changing ip address. Which by the way i got from free-proxies site. So, It's going to take time because some proxies are invalide. It's very much secure because of scrapy's inbuilt support. which is choice of major web scraper because of simplicity and efficiency.
-      becuase of this approch, It's gonna take time to load all the data from the site or depend on the file user have provided to fetch the data. less symbols in file less request will be generated.
+ Here, In this approch, I have used complete transparancy by getting every line of json file with different request by changing ip address. Which by the way i got from free-proxies site. So, It's going to take time because some proxies are invalide. It's very much secure because of scrapy's inbuilt support. which is choice of major web scraper because of simplicity and efficiency.
+ becuase of this approch, It's gonna take time to load all the data from the site or depend on the file user have provided to fetch the data. less symbols in file less request will be generated.
 ---
 > Why Scrapy?
 
