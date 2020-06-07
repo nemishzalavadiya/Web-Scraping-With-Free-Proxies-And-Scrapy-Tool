@@ -1,17 +1,14 @@
 # Web_Scraping_Using_Proxies_And_Scrapy-Tool
-## Click and Use --> Run_Me.sh file
+## Click and Use  `Run_Me.sh` file
 Scrapy project with Free Proxies and also by obeying robot.txt file rules of website
 ### https://www.barchart.com/robots.txt
 Sitemap: https://www.barchart.com/sitemap.xml
 
- - User-agent: * ->
-   Disallow: /proxies/
+ - User-agent: `Disallow: /proxies/`
 
- - User-agent: proximic ->
-   Disallow: /
+ - User-agent: proximic `Disallow: /`
 
- - User-agent: msnbot ->
-   Crawl-delay: 3
+ - User-agent: msnbot `Crawl-delay: 3`
 
       <p>&nbsp&nbsp&nbsp Here, In this approch, I have used complete transparancy by getting every line of json file with different request by changing ip address. Which by the way i got from free-proxies site. So, It's going to take time because some proxies are invalide. It's very much secure because of scrapy's inbuilt support. which is choice of major web scraper because of simplicity and efficiency.</p>
       <p>&nbsp&nbsp becuase of this approch, It's gonna take time to load all the data from the site or depend on the file user have provided to fetch the data. less symbols in file less request will be generated.</p>
