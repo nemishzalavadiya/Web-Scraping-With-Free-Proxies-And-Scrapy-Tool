@@ -11,10 +11,10 @@ Sitemap: https://www.barchart.com/sitemap.xml
  - User-agent: msnbot `Crawl-delay: 3`
 
 > Approch
-
-      ```Here, In this approch, I have used complete transparancy by getting every line of json file with different request by changing ip address. Which by the way i got from free-proxies site. So, It's going to take time because some proxies are invalide. It's very much secure because of scrapy's inbuilt support. which is choice of major web scraper because of simplicity and efficiency.```
-      ```becuase of this approch, It's gonna take time to load all the data from the site or depend on the file user have provided to fetch the data. less symbols in file less request will be generated.```
-
+---
+      Here, In this approch, I have used complete transparancy by getting every line of json file with different request by changing ip address. Which by the way i got from free-proxies site. So, It's going to take time because some proxies are invalide. It's very much secure because of scrapy's inbuilt support. which is choice of major web scraper because of simplicity and efficiency.
+      becuase of this approch, It's gonna take time to load all the data from the site or depend on the file user have provided to fetch the data. less symbols in file less request will be generated.
+---
 > Why Scrapy?
 
 ### Scrapy is a very efficient and handy tool for web scraping purpose. I have used it here in this project where what i did is,
@@ -40,14 +40,14 @@ Sitemap: https://www.barchart.com/sitemap.xml
       
 #### Here I have created Utility Class, Unittesting Class, ConfigurationXml Files etc. to manage organization of code as well as make it look modularized.
  
- - Utility Class
+ - **Utility Class**
    - ProxyUtility
    - SymbolUtility
    - XmlUtility
- - Unittesting
+ - **Unittesting**
    - test
- - goog
+ - **goog**
    - spiders
-    - GoogCompetitor ( Functional Requirements performed here )
+     - GoogCompetitor ( Functional Requirements performed here )
    - setting.py and other util classes of scrapy      
 
