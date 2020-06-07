@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="110" height="20">
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="30">
 <linearGradient id="a" x2="0" y2="100%">
     <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
     <stop offset="2" stop-opacity=".1"/>
@@ -10,7 +10,7 @@
 
 <path fill="#4c1" d="M80 0h4v20h-4z"/>
 
-<rect rx="3" width="110" height="20" fill="url(#a)"/>
+<rect rx="3" width="140" height="30" fill="url(#a)"/>
 	<g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
 	    <text x="40" y="15" fill="#010101" fill-opacity=".3">code coverage</text>
 	    <text x="40" y="14">code coverage</text>
